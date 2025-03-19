@@ -14,43 +14,6 @@ This project is a **RESTful backend** developed with **NestJS** and **TypeORM**,
 
 ---
 
-## Project Structure
-
-```
-backend-postgres-api/
-├── dist/                      # Compiled files after build
-├── node_modules/              # Project dependencies
-├── notebooks/                 # Tests and analyses with Jupyter Notebook
-│   └── test_api.ipynb         # API and performance test notebook
-├── src/
-│   ├── config/                # Global configuration
-│   │   └── config.module.ts
-│   ├── controllers/           # API route definitions
-│   │   └── user.controller.ts
-│   ├── database/              # PostgreSQL connection management
-│   │   └── database.module.ts
-│   ├── models/                # Data models (TypeORM Entities)
-│   │   └── user.entity.ts
-│   ├── scripts/               # Utility scripts (data generation)
-│   │   └── generate-fake-data.ts
-│   ├── services/              # Business logic
-│   │   ├── user.module.ts
-│   │   └── user.service.ts
-│   ├── app.module.ts          # Main application module
-│   ├── main.ts                # Application entry point
-├── .dockerignore              # Files to ignore by Docker
-├── .env                       # Environment variables
-├── .gitignore                 # Files to ignore by Git
-├── .prettierrc                # Prettier configuration
-├── Dockerfile                 # API Dockerization
-├── docker-compose.yml         # Simplified container management
-├── package.json               # Project dependencies
-├── tsconfig.json              # TypeScript configuration
-└── README.md                  # Documentation
-```
-
----
-
 # Installation and Running with Docker
 
 ## 1. Clone the project
@@ -116,3 +79,40 @@ docker-compose up -d --build
 
 ## 7. `notebooks/`
 - Contains **Jupyter notebooks** for **API testing and performance analysis**.
+
+## Project Structure
+
+```
+backend-postgres-api/
+├── dist/                      # Compiled files after build
+├── node_modules/              # Project dependencies
+├── notebooks/                 # Tests and analyses with Jupyter Notebook
+│   └── test_api.ipynb         # API and performance test notebook
+├── src/
+│   ├── config/                # Global configuration
+│   │   └── config.module.ts
+│   ├── controllers/           # API route definitions
+│   │   └── user.controller.ts
+│   ├── database/              # PostgreSQL connection management
+│   │   └── database.module.ts
+│   ├── models/                # Data models (TypeORM Entities)
+│   │   └── user.entity.ts
+│   ├── scripts/               # Utility scripts (data generation)
+│   │   └── generate-fake-data.ts
+│   ├── services/              # Business logic
+│   │   ├── user.module.ts
+│   │   └── user.service.ts
+│   ├── app.module.ts          # Main application module
+│   ├── main.ts                # Application entry point
+├── .dockerignore              # Files to ignore by Docker
+├── .env                       # Environment variables
+├── .gitignore                 # Files to ignore by Git
+├── .prettierrc                # Prettier configuration
+├── Dockerfile                 # API Dockerization
+├── docker-compose.yml         # Simplified container management
+├── package.json               # Project dependencies
+├── tsconfig.json              # TypeScript configuration
+└── README.md                  # Documentation
+```
+
+---

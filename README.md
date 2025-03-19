@@ -23,7 +23,26 @@ git clone https://github.com/nolancacheux/backend-postgres-api.git
 cd backend-postgres-api
 ```
 
-## 2. Build and start the containers with Docker Compose
+## 2. Configuration of .env File
+
+Create a `.env` file in the project root directory with the following content:
+
+```ini
+# Server Configuration
+PORT=3000
+
+# PostgreSQL Database Configuration
+DATABASE_HOST=postgres  # Should match the service name in docker-compose.yml
+DATABASE_PORT=5432
+DATABASE_USER=postgres
+DATABASE_PASSWORD=postgres
+DATABASE_NAME=mydb
+
+# Other Configurations
+NODE_ENV=development
+```
+
+## 3. Build and start the containers with Docker Compose
 
 Simply run:
 
@@ -35,7 +54,7 @@ This starts the application and the database **in the background**.
 
 The API will be accessible at **http://localhost:3000/users**.
 
-## 3. Generate fake data in the database
+## 4. Generate fake data in the database
 
 ```bash
 docker exec -it backend-api npx ts-node src/scripts/generate-fake-data.ts
@@ -43,12 +62,12 @@ docker exec -it backend-api npx ts-node src/scripts/generate-fake-data.ts
 
 This adds **100 fake users** to the database.
 
-## 4. Test the API with the Jupyter Notebook
+## 5. Test the API with the Jupyter Notebook
 
 - Open the file **`notebooks/test_api.ipynb`**.
 - Run the cells to **test the API and analyze performance**.
 
-## 5. Restart the Docker containers if something goes wrong
+## 6. Restart the Docker containers if something goes wrong
 
 ```bash
 docker-compose down

@@ -56,7 +56,7 @@ backend-postgres-api/
 ## 1. Clone the project
 
 ```bash
-git clone [https://github.com/Projet-M1/backend-postgres-api.git](https://github.com/nolancacheux/backend-postgres-api.git)
+git clone https://github.com/Projet-M1/backend-postgres-api.git
 cd backend-postgres-api
 ```
 

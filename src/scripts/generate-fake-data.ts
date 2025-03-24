@@ -20,10 +20,10 @@ async function generateFakeData() {
 
   for (let i = 0; i < 100; i++) {
     const user = userRepository.create({
-      firstName: faker.person.firstName(),
-      lastName: faker.person.lastName(),
-      email: faker.internet.email(),
-      password: faker.internet.password(),
+      firstName: Math.random() > 0.2 ? faker.person.firstName() : null, // 20% probabilité d'avoir un prénom manquant
+      lastName: Math.random() > 0.2 ? faker.person.lastName() : null, // 20% probabilité d'avoir un nom manquant
+      email: Math.random() > 0.1 ? faker.internet.email() : null,  // emails manquants plus rares
+      password: faker.internet.password(),  // jamais null, sécurité oblige
     });
 
     await userRepository.save(user);
